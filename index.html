@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7efe7">
+  <title>For my Somu, on your birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="lock-screen" id="lockScreen">
+    <div class="lock-orbit"></div>
+    <div class="lock-content">
+      <p class="eyebrow">A birthday surprise for my baby &#10024;</p>
+      <h1>Something special<br><em>is waiting for you, Somu. &#128151;</em></h1>
+      <p class="lock-message">You found this a little early. Come back when the clock says midnight, and I promise it will be worth the wait. &#127873;</p>
+      <div class="lock-timer" id="lockTimer" aria-live="polite">00 : 00 : 00 : 00</div>
+      <p class="lock-caption">days &nbsp; : &nbsp; hours &nbsp; : &nbsp; minutes &nbsp; : &nbsp; seconds</p>
+      <p class="lock-hint">Keep this link safe. It unlocks on 6 September at 12:00 AM. &#127769;</p>
+    </div>
+  </div>
+  <div class="balloon-field" id="balloonField" aria-label="Clickable birthday balloons">
+    <button class="balloon balloon-pink" aria-label="Pop pink balloon" data-message="My cute babu, you make my world softer. &#128150;"></button>
+    <button class="balloon balloon-orange" aria-label="Pop orange balloon" data-message="My heart feels happier because you are in my life. &#128149;"></button>
+    <button class="balloon balloon-yellow" aria-label="Pop yellow balloon" data-message="You are my favorite notification. &#128241; &#128151;"></button>
+    <button class="balloon balloon-blue" aria-label="Pop blue balloon" data-message="You are the calm in my busiest days. &#127769;"></button>
+    <button class="balloon balloon-green" aria-label="Pop green balloon" data-message="I cannot wait to make more beautiful memories with you. &#127880;"></button>
+  </div>
+  <div class="surprise-toast" id="surpriseToast" role="status"></div>
+  <main>
+    <nav class="topbar" aria-label="Page navigation">
+      <span class="brand">For my baby &#10084;&#65039;</span>
+    </nav>
+
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">For the girl who makes ordinary days feel special &#10024;</p>
+        <h1>Happy birthday,<br><em>my baby. &#127874;</em></h1>
+        <p class="intro">Some people arrive in our lives and quietly make everything feel warmer. Chotu, you are that person for me.</p>
+        <button class="begin-button" id="beginButton">Open your birthday note <span>-></span></button>
+        <p class="interaction-hint"><span class="hint-dot"></span> Psst... tap the floating balloons for little secrets &#127880;</p>
+        <button class="song-button" id="songButton" aria-pressed="false"><span class="song-icon">&#9835;</span> Play our song</button>
+        <iframe class="song-player" id="songPlayer" title="Our song audio" src="https://www.youtube.com/embed/Jhg9jRwl81Q?enablejsapi=1&playsinline=1&rel=0" allow="autoplay; encrypted-media"></iframe>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="star star-one">+</div>
+        <div class="star star-two">*</div>
+        <div class="star star-three">+</div>
+        <div class="orbit-label">somewhere between<br>then &amp; always</div>
+      </div>
+    </section>
+
+    <section class="note reveal" id="note">
+      <div class="section-label">01 / A note from me &#128140;</div>
+      <div class="note-card">
+        <p class="handwritten">To my Soumya,</p>
+        <p>There are so many things I wish I could say while sitting next to you today. Since I cannot be there yet, I built you this little corner of the internet instead.</p>
+        <p>Thank you for bringing so much kindness, laughter, and light into my life. I love the way you make even the simplest conversations feel important.</p>
+        <p>Today, I hope you feel surrounded by all the love you deserve. I may not be beside you right now, but my heart is celebrating you from wherever I am. The cake, hugs, and proper birthday celebration are waiting for us.</p>
+        <p class="love-line">I love you. &#10084;&#65039;</p>
+        <p class="handwritten signoff">Always yours,<br>with all my love</p>
+      </div>
+    </section>
+
+    <section class="gallery reveal">
+      <div class="section-label">02 / Little pieces of you &#128151;</div>
+      <div class="gallery-heading"><h2>The little things<br><em>I love about you.</em></h2></div>
+      <div class="photo-grid">
+        <div class="photo-slot photo-one"><img src="images/our-selfie.jpeg" alt="A sweet imagined moment together"><span>PHOTO 01 / A LITTLE DREAM</span><strong>Us, the way I imagine us</strong></div>
+        <div class="photo-slot photo-two"><img src="images/ai-video-call.jpeg" alt="A video-call memory"><span>PHOTO 02 / A MOMENT I KEEP</span><strong>Our little video-call memory</strong></div>
+        <div class="photo-slot photo-three"><img src="images/a-moment-to-treasure.jpeg" alt="A beautiful portrait of her"><span>PHOTO 03 / A SPECIAL DAY</span><strong>The smile I adore</strong></div>
+      </div>
+    </section>
+
+    <section class="timeline reveal">
+      <div class="section-label">03 / What you mean to me &#129505;</div>
+      <div class="timeline-grid">
+        <article><span class="number">01</span><h3>Your kindness</h3><p>You have a way of making people feel seen, understood, and safe to be themselves.</p></article>
+        <article><span class="number">02</span><h3>Your presence</h3><p>Even when we are apart, thinking of you can turn an ordinary day into a better one.</p></article>
+        <article><span class="number">03</span><h3>Your place in my heart</h3><p>You are someone I choose, appreciate, and feel grateful for every single day.</p></article>
+      </div>
+    </section>
+
+    <section class="surprises reveal">
+      <div class="section-label">04 / Tap to open &#128150;</div>
+      <div class="surprise-heading"><h2>A few secrets<br><em>for you.</em></h2></div>
+      <div class="surprise-grid">
+        <button class="surprise-card" data-message="Chotu, you make me want to become a kinder, happier version of myself."><span class="card-icon">01</span><strong>Open when you need a smile</strong><small>tap to reveal</small></button>
+        <button class="surprise-card" data-message="My favorite place is any place where I get to hear my Somu laugh."><span class="card-icon">02</span><strong>Open when you miss me</strong><small>tap to reveal</small></button>
+        <button class="surprise-card" data-message="No matter how busy life gets, I will always make room for you, Chotu, in my heart."><span class="card-icon">03</span><strong>Open for a promise</strong><small>tap to reveal</small></button>
+      </div>
+    </section>
+
+    <section class="promise reveal">
+      <div class="promise-mark">∞ <span>more to come</span></div>
+      <div>
+      <div class="section-label">05 / The next chapter &#10024;</div>
+        <h2>There is so much<br><em>more to come.</em></h2>
+        <p>This birthday may begin with a screen between us, but it will not stay that way. I cannot wait to create more memories with you, one beautiful day at a time.</p>
+        <div class="countdown" id="countdown" aria-live="polite">Until our next hello, my baby &#10084;&#65039;</div>
+      </div>
+    </section>
+
+    <section class="final reveal">
+      <p class="eyebrow">One last thing</p>
+      <h2>You are my favorite<br><em>unexpected beginning, babu.</em></h2>
+      <p>Happy birthday, my baby. I hope this year is gentle with you and full of everything you deserve.</p>
+      <p class="final-love">I love you, Chotu, more than this little page can hold. &#128151;</p>
+      <button class="replay-button" id="replayButton">Read it again <span>↗</span></button>
+    </section>
+  </main>
+  <footer>Made with care, a little code, and a lot of love. &#128157; &#10024;</footer>
+  <script src="script.js"></script>
+</body>
+</html>
