@@ -42,7 +42,7 @@ function celebrate() {
 document.body.classList.add('locked');
 
 // Midnight is fixed to India time so the reveal is consistent for both of you.
-const birthdayReveal = new Date('2026-09-05T18:07:40+05:30');
+const birthdayReveal = new Date('2026-09-06T00:00:00+05:30');
 function updateLockTimer() {
   const remaining = birthdayReveal - new Date();
   if (remaining <= 0) {
