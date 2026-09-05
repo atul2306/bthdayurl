@@ -7,24 +7,24 @@ const surpriseToast = document.querySelector('#surpriseToast');
 const balloonField = document.querySelector('#balloonField');
 const songButton = document.querySelector('#songButton');
 const songPlayer = document.querySelector('#songPlayer');
-let songReady = false;
 
-songPlayer.addEventListener('load', () => {
-  songReady = true;
+songPlayer.addEventListener('ended', () => {
+  songButton.setAttribute('aria-pressed', 'false');
+  songButton.innerHTML = '<span class="song-icon">&#9835;</span> A song for my baby';
 });
 let hasUnlocked = false;
 
 songButton.addEventListener('click', () => {
   const isPlaying = songButton.getAttribute('aria-pressed') !== 'true';
-  const command = isPlaying ? 'playVideo' : 'pauseVideo';
-  if (isPlaying && !songReady) {
-    songPlayer.src = 'https://www.youtube.com/embed/Jhg9jRwl81Q?enablejsapi=1&playsinline=1&rel=0&autoplay=1';
+  if (isPlaying) {
+    songPlayer.play().catch(() => {
+      songButton.setAttribute('aria-pressed', 'false');
+    });
+  } else {
+    songPlayer.pause();
   }
-  const sendCommand = () => songPlayer.contentWindow.postMessage(JSON.stringify({ event: 'command', func: command, args: [] }), '*');
-  sendCommand();
-  if (isPlaying) setTimeout(sendCommand, 900);
   songButton.setAttribute('aria-pressed', String(isPlaying));
-  songButton.innerHTML = isPlaying ? '<span class="song-icon">&#10074;&#10074;</span> Pause our song' : '<span class="song-icon">&#9835;</span> Play our song';
+  songButton.innerHTML = isPlaying ? '<span class="song-icon">&#10074;&#10074;</span> Pause the song' : '<span class="song-icon">&#9835;</span> A song for my baby';
 });
 
 function celebrate() {

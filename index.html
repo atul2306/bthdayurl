@@ -43,8 +43,10 @@
         <p class="intro">Some people arrive in our lives and quietly make everything feel warmer. Chotu, you are that person for me.</p>
         <button class="begin-button" id="beginButton">Open your birthday note <span>-></span></button>
         <p class="interaction-hint"><span class="hint-dot"></span> Psst... tap the floating balloons for little secrets &#127880;</p>
-        <button class="song-button" id="songButton" aria-pressed="false"><span class="song-icon">&#9835;</span> Play our song</button>
-        <iframe class="song-player" id="songPlayer" title="Our song audio" src="https://www.youtube.com/embed/Jhg9jRwl81Q?enablejsapi=1&playsinline=1&rel=0" allow="autoplay; encrypted-media"></iframe>
+        <button class="song-button" id="songButton" aria-pressed="false"><span class="song-icon">&#9835;</span> A song for my baby</button>
+        <audio class="song-player" id="songPlayer" preload="metadata">
+          <source src="audio/birthday-song.mpeg" type="audio/mpeg">
+        </audio>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="sun"></div>
